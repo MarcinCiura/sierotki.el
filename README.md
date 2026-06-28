@@ -60,13 +60,13 @@ preventing double tildes:
 ```elisp
 (with-eval-after-load 'sierotki
   (setq tex-magic-space-regexp
-        (concat "\\(^\\|[^~]\\)\\<\\("
+        (concat \\<"
                 (regexp-opt '("a" "e" "i" "o" "u" "w" "z"
                               "A" "E" "I" "O" "U" "W" "Z"
                               "do" "ku" "na" "od" "we" "za" "ze"
                               "II" "III" "IV")
-                            nil)
-                "\\)")))
+                            t)
+                )))
 
 ```
 
